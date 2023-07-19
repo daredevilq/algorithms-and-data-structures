@@ -21,8 +21,6 @@ def bfs_shortest_path(G,s,t):
     pred=[-1]*len(G)
     distance[s]=0
 
-
-
     while not queue.empty():
         u = queue.get()
         for v in G[u]:
@@ -55,7 +53,7 @@ def find_edge(G,s,t,edge):
             if not ((u==v_1 and v==v_2) or (u==v_2 and v==v_1)):
 
                 if not visited[v]:
-                    queue.put(v)
+                    queue.put(v) 
                     visited[v] = True
 
                     distance[v]=distance[u]+1
